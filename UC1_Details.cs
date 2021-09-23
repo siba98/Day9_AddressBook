@@ -44,7 +44,7 @@ namespace Day9_AddressBook
             person.email = Console.ReadLine();
 
 
-            Console.WriteLine("\n\nDetails of the Person are given below: ");
+            Console.WriteLine("\nDetails of the Person are given below: ");
             Console.WriteLine("\nFirst Name: " + person.firstname);
             Console.WriteLine("\nLast Name: " + person.lastname);
             Console.WriteLine("\nAddress: " + person.address);
