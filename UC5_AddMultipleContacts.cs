@@ -96,7 +96,7 @@ namespace Day9_AddressBook
                         break;
 
                     default:
-                        Console.WriteLine("The choice you made is not valid, please try again");
+                        Console.WriteLine("The choice you made is not valid, please try again.");
                         break;
                 }
                 ListPeople();
