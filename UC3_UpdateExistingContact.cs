@@ -110,49 +110,77 @@ namespace Day9_AddressBook
                         switch (choice)
                         {
                             case 1:
+<<<<<<< HEAD
              
+=======
+
+>>>>>>> UC3
                                 Console.WriteLine("Enter New LastName; ");
                                 person.lastname = Console.ReadLine();
                                 People.Add(person);
                                 Console.WriteLine("Last Name: " + person.lastname);
                                 break;
                             case 2:
+<<<<<<< HEAD
                              
+=======
+
+>>>>>>> UC3
                                 Console.WriteLine("Enter New Address; ");
                                 person.address = Console.ReadLine();
                                 People.Add(person);
                                 Console.WriteLine("Address: " + person.address);
                                 break;
                             case 3:
+<<<<<<< HEAD
                          
+=======
+
+>>>>>>> UC3
                                 Console.WriteLine("Enter New City: ");
                                 person.city = Console.ReadLine();
                                 People.Add(person);
                                 Console.WriteLine("City: " + person.city);
                                 break;
                             case 4:
+<<<<<<< HEAD
                         
+=======
+
+>>>>>>> UC3
                                 Console.WriteLine("Enter New State: ");
                                 person.state = Console.ReadLine();
                                 People.Add(person);
                                 Console.WriteLine("MobileNumber: " + person.state);
                                 break;
                             case 5:
+<<<<<<< HEAD
                    
+=======
+
+>>>>>>> UC3
                                 Console.WriteLine("Enter New ZipCode: ");
                                 person.zipcode = Console.ReadLine();
                                 People.Add(person);
                                 Console.WriteLine("ZipCode: " + person.zipcode);
                                 break;
                             case 6:
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> UC3
                                 Console.WriteLine("Enter New PhoneNumber: ");
                                 person.phonenumber = Console.ReadLine();
                                 People.Add(person);
                                 Console.WriteLine("PhoneNumber: " + person.phonenumber);
                                 break;
                             case 7:
+<<<<<<< HEAD
                           
+=======
+
+>>>>>>> UC3
                                 Console.WriteLine("Enter New Email ID: ");
                                 person.email = Console.ReadLine();
                                 People.Add(person);
@@ -170,9 +198,15 @@ namespace Day9_AddressBook
                     }
                     ListAllContacts();
                     break;
+<<<<<<< HEAD
                         default:
                         Console.WriteLine("Thanku!!!");
                         break;
+=======
+                default:
+                    Console.WriteLine("Thanku!!!");
+                    break;
+>>>>>>> UC3
             }
         }
     }
