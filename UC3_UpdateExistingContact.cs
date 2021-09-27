@@ -89,54 +89,90 @@ namespace Day9_AddressBook
                 case "1":
                     Console.WriteLine("Enter the First Name of the Person U want to update");
                     string firstname = Console.ReadLine();
-                    UC3_UpdateExistingContact findperson = People.Find(x => x.firstname.ToLower() == firstname.ToLower());
-                    if (findperson == null)
+                    UC3_UpdateExistingContact person = People.Find(x => x.firstname.ToLower() == firstname.ToLower());
+                    if (person == null)
                     {
                         Console.WriteLine("That person U entered is not found");
                     }
 
-                    Console.WriteLine("Are you sure you want to remove this person and enter new in your address book? Enter --> (Y/N)");
-                    PrintingDetails(findperson);
+                    Console.WriteLine("Are you sure you want to edit the person details from your address book? Enter --> (Y/N)");
+                    PrintingDetails(person);
                     if (Console.ReadKey().Key == ConsoleKey.Y)
                     {
-                        People.Remove(findperson);
-                        Console.WriteLine("Person removed. Press any key to continue.");
-                        Console.ReadKey();
+                        Console.WriteLine("Press 1 if u want to edit the LastName");
+                        Console.WriteLine("Press 2 if u want to edit the Address");
+                        Console.WriteLine("Press 3 if u want to edit the City");
+                        Console.WriteLine("Press 4 if u want to edit the State");
+                        Console.WriteLine("Press 5 if u want to edit the Zip Code");
+                        Console.WriteLine("Press 6 if u want to edit the Phone Number");
+                        Console.WriteLine("Press 7 if u want to edit the Email Id");
+                        int choice = Convert.ToInt32(Console.ReadLine());
+                        switch (choice)
+                        {
+                            case 1:
+
+                                Console.WriteLine("Enter New LastName; ");
+                                person.lastname = Console.ReadLine();
+                                People.Add(person);
+                                Console.WriteLine("Last Name: " + person.lastname);
+                                break;
+                            case 2:
+
+                                Console.WriteLine("Enter New Address; ");
+                                person.address = Console.ReadLine();
+                                People.Add(person);
+                                Console.WriteLine("Address: " + person.address);
+                                break;
+                            case 3:
+
+                                Console.WriteLine("Enter New City: ");
+                                person.city = Console.ReadLine();
+                                People.Add(person);
+                                Console.WriteLine("City: " + person.city);
+                                break;
+                            case 4:
+
+                                Console.WriteLine("Enter New State: ");
+                                person.state = Console.ReadLine();
+                                People.Add(person);
+                                Console.WriteLine("MobileNumber: " + person.state);
+                                break;
+                            case 5:
+
+                                Console.WriteLine("Enter New ZipCode: ");
+                                person.zipcode = Console.ReadLine();
+                                People.Add(person);
+                                Console.WriteLine("ZipCode: " + person.zipcode);
+                                break;
+                            case 6:
+
+                                Console.WriteLine("Enter New PhoneNumber: ");
+                                person.phonenumber = Console.ReadLine();
+                                People.Add(person);
+                                Console.WriteLine("PhoneNumber: " + person.phonenumber);
+                                break;
+                            case 7:
+
+                                Console.WriteLine("Enter New Email ID: ");
+                                person.email = Console.ReadLine();
+                                People.Add(person);
+                                Console.WriteLine("Email Id: " + person.email);
+                                break;
+
+                            default:
+                                Console.WriteLine("Invalid Choice");
+                                break;
+                        }
                     }
                     if (Console.ReadKey().Key == ConsoleKey.N)
                     {
                         Console.WriteLine("OKK. Press any key to continue.");
                     }
-                    
                     ListAllContacts();
-
-                    //NewContact();
-                    //for (int i = 0; i < People.Count; i++)
-                    //{
-                    //    if (People[i].firstname.Equals(firstname))
-                    //    {
-                    //        Console.WriteLine("Press 1 if u want to edit the FirstName");
-                    //        Console.WriteLine("Press 2 if u want to edit the LastName");
-                    //        Console.WriteLine("Press 3 if u want to edit the Address");
-                    //        Console.WriteLine("Press 4 if u want to edit the City");
-                    //        Console.WriteLine("Press 5 if u want to edit the State");
-                    //        Console.WriteLine("Press 6 if u want to edit the Zip Code");
-                    //        Console.WriteLine("Press 7 if u want to edit the Phone Number");
-                    //        Console.WriteLine("Press 8 if u want to edit the Email Id");
-                    //        switch(Console.ReadLine())
-                    //        {
-                    //            case "1":
-                    //                Console.Write("Enter new FirstName: ");
-                    //                break;
-                    //        }
-                    //    }
-                    //}
-
-
                     break;
-                        default:
-                        Console.WriteLine("The choice you made is not valid, please try again");
-                        break;
+                default:
+                    Console.WriteLine("Thanku!!!");
+                    break;
             }
         }
     }
