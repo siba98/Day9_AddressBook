@@ -92,13 +92,18 @@ namespace Day9_AddressBook
                     switch (Console.ReadLine())
                     {
                         case "1":
-                            Console.Write("Enter the First Name: ");
-                            string firstname = Console.ReadLine();
+                           
                             for (int j = 0; j < People.Count; j++)
                             {
-                                if (People[j].firstname.Equals(firstname))
+                                Console.Write("Enter the First Name: ");
+                                string fname = Console.ReadLine();
+                                if (People[j].firstname.Equals(fname))
                                 {
-                                    Console.WriteLine("Name already exists");
+                                    Console.WriteLine("Name already exists\n");
+                                    Console.ReadKey();
+                                    Console.WriteLine("\nEnter a New name and Add the details");
+                                    ContactDetails();
+                                    ListAllPeople();
                                 }
                                 else
                                 {
